@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    :root{
+        --headingColor: #32F5C8;
+        --textColor: #A9BDC6;
+        --background: #013243;
+        /* fonts */
+        --headingFont: 'Sen', sans-serif;
+        --textFont: 'Inter', sans-serif;
+        --lineHeight: 34px;
+        /* Misc */
+        --transition: all 0.3s linear;
+        --radius: 0.3rem;
+    }
+
+    h1,h2,h3,h4{
+        font-family: var(--headingFont);
+        color: var(--headingColor);
+    }
+    p, a, li{
+        font-family: var(--textFont);
+        color: var(--textColor);
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 55px;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+
+
+    @media screen and (min-width:768px){
+        h1{
+            font-size: 6.25rem;
+        }
+    }
+    @media screen and (min-width:1140px){
+        h1{
+            font-size: 9.375rem;
+        }
+    }
+
+
+    /* Global Styles */
+    .btn{
+        color: #013243;
+        font-family: var(--textFont);
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: var(--headingColor);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+    }
+    .container{
+        width: 90%;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+    body{
+        background: var(--background);
+    }
+
+/*
+=============== 
+Navbar
+===============
+*/
+.navbar{
+    padding-top: 1.25rem;
+}
+/*
+=============== 
+Hero
+===============
+*/
+#hero{
+    padding-top: 10.25rem;
+    padding-bottom: 14.75rem;
+    z-index: 1;
+}
+.hero-container{
+    display: grid;
+    gap: 2.125rem;
+}
+.hero-container p{
+    line-height: var(--lineHeight);
+    max-width: 556px;
+}
+@media screen and (min-width:768px){
+    #hero{
+        padding-top: 13.5rem;
+        padding-bottom: 10.75rem;
+    }
+}
+@media screen and (min-width:1140px){
+    #hero{
+        padding-top: 5.375rem;
+        padding-bottom: 8rem;
+    }
+}
+/*
+=============== 
+Footer
+===============
+*/
+.footer-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 20px;
+}
+@media screen and (min-width:768px){
+    .footer-container{
+        padding-bottom: 4.125rem;
+    }
+}
+@media screen and (min-width:1140px){
+    .footer-container{
+        padding-bottom: 8.125rem;
+    }
+}
+/*
+=============== 
+Avatars
+===============
+*/
+.main-container{
+    position: relative;
+}
+#avatar-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.avatar-1{
+    display: none;
+    position: absolute;
+    z-index: -1;
+}
+.avatar-2{
+    position: absolute;
+    right: 0;
+    top: 2.7rem;
+    z-index: -1;
+}
+.avatar-3{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 4rem;
+    left: 2rem;
+    z-index: -1;
+}
+.avatar-4{
+    display: none;
+    position: absolute;
+    z-index: -1;
+}
+.avatar-5{
+    display: none;
+    position: absolute;
+    z-index: -1;
+}
+.avatar-6{
+    position: absolute;
+    right: -1rem;
+    top: 33rem;
+    z-index: -1;
+
+}
+
+@media screen and (min-width:768px){
+    .avatar-1{
+        display: block;
+        top: 29%;
+        right: 0;
+    }
+    .avatar-4{
+        display: block;
+        bottom: -8%;
+        right: 0;
+    }
+    .avatar-5{
+        display: block;
+        top: 18%;
+        right: 20%;
+    }
+    .avatar-6{
+        width: 141px;
+        height: 141px;
+        top: 28rem;
+    }
+}
+
+@media screen and (min-width:1140px){
+    .avatar-3{
+        left: -5rem;
+    }
+    .avatar-6{
+        top: 24rem;
+        left: 45%;
+    }
+}
